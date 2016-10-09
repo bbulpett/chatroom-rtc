@@ -4,6 +4,8 @@ defmodule Chatroom.UserSocket do
   ## Channels
   # channel "room:*", Chatroom.RoomChannel
 
+  channel "lobby", Chatroom.LobbyChannel
+
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
   # transport :longpoll, Phoenix.Transports.LongPoll
