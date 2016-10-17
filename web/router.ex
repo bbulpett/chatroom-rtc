@@ -23,4 +23,6 @@ defmodule Chatroom.Router do
   # scope "/api", Chatroom do
   #   pipe_through :api
   # end
+
+  resources "/registrations", RegistrationController, only: [:new, :create]
 end
