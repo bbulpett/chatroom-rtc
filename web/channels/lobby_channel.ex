@@ -1,5 +1,5 @@
 defmodule Chatroom.LobbyChannel do
-	use Phoenix.LobbyChannel
+	use Phoenix.Channel
 
 	# Allow all conncections to join the channel
 	def join("lobby", _payload, socket) do
