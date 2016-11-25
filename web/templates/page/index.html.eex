@@ -3,7 +3,16 @@
   <p class="lead">The world's simplest chat application.</p>
 </div>
 
-<div id='message-list' class='row'>
+<div>
+  <video id="localVideo" autoplay></video>
+  <video id="remoteVideo" autoplay></video>
+
+  <button id="connect">Connect</button>
+  <button id="call">Call</button>
+  <button id="hangup">Hangup</button>
+</div>
+
+<!-- <div id='message-list' class='row'>
 </div>
 
 <div class='row form-group'>
@@ -13,4 +22,4 @@
   <div class='col-md-9'>
     <input type='text' id='message' class='form-control' placeholder='Message' />
   </div>
-</div>
+</div> -->
