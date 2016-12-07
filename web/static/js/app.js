@@ -19,3 +19,16 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 import socket from "./socket"
+
+let localStream, peerConnection;
+let localVideo = document.getElementById("localVideo");
+let remoteVideo = document.getElementById("remoteVideo");
+let connectButton = document.getElementById("connect");
+let callButton = document.getElementById("call");
+let hangupButton = document.getElementById("hangup");
+
+hangupButton.disabled = true;
+callButton.disabled = true;
+connectButton.onclick = connect;
+callButton.onclick = call;
+hangupButton.onclick = hangup;
