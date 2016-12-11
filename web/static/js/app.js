@@ -48,3 +48,16 @@ function gotStream(stream) {
   localStream = stream;
   setupPeerConnection();
 }
+
+function setupPeerConnection() {
+  connectButton.disabled = true;
+  callButton.disabled= false;
+  hangupButton.disabled = false;
+  console.log("Waiting for call");
+
+  let servers = {
+    "iceServers": [{
+      "url": "" // TODO - Add url for server to handle incoming connections
+    }]
+  }
+}
