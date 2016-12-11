@@ -32,3 +32,19 @@ callButton.disabled = true;
 connectButton.onclick = connect;
 callButton.onclick = call;
 hangupButton.onclick = hangup;
+
+// Capture local video stream then call gotStream
+function connect() {
+  console.log("Requesting local stream");
+  navigator.getUserMedia({audio: true, video: true}, gotStream, error => {
+    console.log("getUserMedia error: ", error);
+  })
+}
+
+// Set local stream and call setupPeerConnection
+function gotStream(stream) {
+  console..log("Received local stream");
+  localVideo.src = URL.createObjectURL(stream);
+  localStream = stream;
+  setupPeerConnection();
+}
