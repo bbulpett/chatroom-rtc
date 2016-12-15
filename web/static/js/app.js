@@ -59,5 +59,12 @@ function setupPeerConnection() {
     "iceServers": [{
       "url": "" // TODO - Add url for server to handle incoming connections
     }]
-  }
+  };
+
+  peerConnection = new RTCPeerConnection(servers);
+  console.log("Created local peer connection");
+  peerConnection.onicecandidate = gotLocalIceCandidate;
+  peerConnection.onaddstreawm = gotRemoteStream;
+  peerConnection.addStream(localStream);
+  console.log("Added localStream to localPeerConnection");
 }
